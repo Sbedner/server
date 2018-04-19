@@ -17,14 +17,17 @@ var PORT1 = 7000;
 var PORT2 = 7500;
 // handle request function
 
+var randomgood=['you look nice!','your GREAT!','Way to go!'];
+var randombad=['you look bad!','your a SLACKER!', 'work Harder!'];
+
 function handleRequest1(request, response){
-    response.end('You are a quiet gentleman/ lady'+request.url);
+    response.end(randomgood[Math.floor(Math.random()*randomgood.length)]);
     
 }
 
 function handleRequest2(request, response){
-    response.end('Slacker'+ request.url);
-    console.log('test it');
+    response.end(randombad[Math.floor(Math.random()*randombad.length)]);
+    
     
 }
 
